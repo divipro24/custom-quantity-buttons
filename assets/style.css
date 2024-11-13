@@ -1,0 +1,53 @@
+/* Общие стили для кнопок */
+.quantity .plus,
+.quantity .minus {
+    background-color: #0073e6; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border: none; /* Убираем стандартную границу */
+    padding: 8px 12px; /* Внутренний отступ */
+    font-size: 18px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+    border-radius: 0px; /* Скругление углов */
+}
+
+/* Стили для кнопки при наведении */
+.quantity .plus:hover,
+.quantity .minus:hover {
+    background-color: #005bb5; /* Цвет фона при наведении */
+}
+
+/* Дополнительные стили для визуального акцента */
+.quantity .plus:active,
+.quantity .minus:active {
+    background-color: #003f8c; /* Цвет фона при нажатии */
+    transform: scale(0.95); /* Эффект "нажатия" */
+}
+
+/* Если нужно увеличить ширину кнопок для лучшего попадания */
+.quantity .plus,
+.quantity .minus {
+    width: 40px; /* Задаем ширину */
+    height: 40px; /* Задаем высоту */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woocommerce .quantity input.qty {
+    -moz-appearance: textfield !important;
+    font-size: 16px !important;
+    color: #595959 !important;
+    background-color: rgba(0, 0, 0, 0.0) !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 2.6em !important;
+}
+
+.woocommerce #content .quantity, .woocommerce .quantity, .woocommerce-page #content .quantity, .woocommerce-page .quantity {
+    width: auto !important;
+}
+
+.et_pb_wc_cart_products .quantity .qty {
+    text-align: center !important;
+}
