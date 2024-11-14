@@ -31,45 +31,17 @@ function aleks_quantity_minus() {
     echo '<button type="button" class="minus">-</button>';
 }
 
-// Добавление JavaScript для управления количеством товаров
-function custom_quantity_buttons_js() {
-    ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.body.addEventListener('click', function(event) {
-            if (event.target.matches('button.plus, button.minus')) {
-                let clickedButton = event.target;
-                let parent = clickedButton.parentNode;
-                let input = parent.querySelector('input');
-                let qty = parseInt(input.value);
-                let min = parseInt(input.getAttribute('min')) || 0;
-                let max = parseInt(input.getAttribute('max')) || Infinity;
-                let step = parseInt(input.getAttribute('step')) || 1;
-                let updateCartButton = document.querySelector('[name="update_cart"]');
-
-                if (clickedButton.classList.contains('plus')) {
-                    if (max && max <= qty) {
-                        input.value = max;
-                    } else {
-                        input.value = qty + step;
-                    }
-                } else if (clickedButton.classList.contains('minus')) {
-                    if (min && min >= qty) {
-                        input.value = min;
-                    } else if (qty > 1) {
-                        input.value = qty - step;
-                    }
-                }
-
-                if (updateCartButton) { // Проверка на null
-                    updateCartButton.removeAttribute('disabled');
-                }
-            }
-        });
-    });
-    </script>
-    <?php
+// Подключение JavaScript файла
+function custom_quantity_buttons_enqueue_scripts() {
+    wp_enqueue_script(
+        'custom-quantity-buttons-js',
+        plugin_dir_url( __FILE__ ) . 'assets/code.js',
+        array( 'jquery' ), // Зависимость от jQuery
+        '1.0',
+        true // Загружаем в футере
+    );
 }
+
 add_action( 'wp_footer', 'custom_quantity_buttons_js' );
 
 // Добавление CSS из отдельного файла
