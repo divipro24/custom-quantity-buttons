@@ -5,7 +5,7 @@ Plugin URI:  https://divipro24.com/
 Description: Меняет кнопки + и - на карточке товара в Woocommerce
 Author URI: https://divipro24.com
 Plugin URI: https://divipro24.com
-Version: 1.0.6
+Version: 1.0.7
 Author: Dmitri Andrejev
 Github URI: https://github.com/divipro24/
 License: GPLv2
@@ -35,7 +35,7 @@ function aleks_quantity_minus() {
 function custom_quantity_buttons_enqueue_scripts() {
     wp_enqueue_script(
         'custom-quantity-buttons-js',
-        plugin_dir_url( __FILE__ ) . 'assets/code.js',
+        plugin_dir_url( __FILE__ ) . 'assets/custom-quantity-buttons.js',
         array( 'jquery' ), // Зависимость от jQuery
         '1.0',
         true // Загружаем в футере
