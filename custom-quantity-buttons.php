@@ -42,9 +42,6 @@ function custom_quantity_buttons_enqueue_scripts() {
     );
 }
 
-add_action( 'wp_enqueue_scripts', 'custom_quantity_buttons_enqueue_scripts' );
-
-
 // Добавление CSS из отдельного файла
 function custom_quantity_buttons_enqueue_styles() {
     wp_enqueue_style(
