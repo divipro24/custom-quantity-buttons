@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: divipro24
-Requires at least: 6.7.0
+Requires at least: 6.6.2
 Tested up to: 6.7.0
 Requires PHP: 8.2
 License: GPLv2 or later
