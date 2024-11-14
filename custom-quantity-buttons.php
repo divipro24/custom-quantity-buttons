@@ -42,6 +42,9 @@ function custom_quantity_buttons_enqueue_scripts() {
     );
 }
 
+add_action( 'wp_footer', 'custom_quantity_buttons_js' );
+
+
 // Добавление CSS из отдельного файла
 function custom_quantity_buttons_enqueue_styles() {
     wp_enqueue_style(
