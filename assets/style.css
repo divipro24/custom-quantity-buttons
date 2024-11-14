@@ -1,11 +1,11 @@
 /* Общие стили для кнопок */
 .quantity .plus,
 .quantity .minus {
-    background-color: #0073e6; /* Цвет фона */
-    color: #fff; /* Цвет текста */
-    border: none; /* Убираем стандартную границу */
+    background-color: #f9f9f9; /* Цвет фона */
+    color: #595959; /* Цвет текста */
+    border: solid 1px rgb(234, 234, 234); /* Убираем стандартную границу */
     padding: 8px 12px; /* Внутренний отступ */
-    font-size: 18px; /* Размер шрифта */
+    font-size: 16px; /* Размер шрифта */
     cursor: pointer; /* Указатель при наведении */
     transition: background-color 0.3s ease; /* Плавный переход цвета */
     border-radius: 0px; /* Скругление углов */
@@ -14,21 +14,21 @@
 /* Стили для кнопки при наведении */
 .quantity .plus:hover,
 .quantity .minus:hover {
-    background-color: #005bb5; /* Цвет фона при наведении */
+    background-color: #ededed; /* Цвет фона при наведении */
 }
 
 /* Дополнительные стили для визуального акцента */
 .quantity .plus:active,
 .quantity .minus:active {
-    background-color: #003f8c; /* Цвет фона при нажатии */
+    background-color: #d6d6d6; /* Цвет фона при нажатии */
     transform: scale(0.95); /* Эффект "нажатия" */
 }
 
 /* Если нужно увеличить ширину кнопок для лучшего попадания */
 .quantity .plus,
 .quantity .minus {
-    width: 40px; /* Задаем ширину */
-    height: 40px; /* Задаем высоту */
+    width: 35px; /* Задаем ширину */
+    height: 35px; /* Задаем высоту */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -42,6 +42,7 @@
     padding-left: 0px !important;
     padding-right: 0px !important;
     width: 2.6em !important;
+    border: 0px;
 }
 
 .woocommerce #content .quantity, .woocommerce .quantity, .woocommerce-page #content .quantity, .woocommerce-page .quantity {
